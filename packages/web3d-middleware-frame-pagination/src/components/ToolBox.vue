@@ -25,7 +25,7 @@
     </div>
 </template>
 <script lang="ts" setup>
-import { useDrama } from '@cutie/web3d';
+import { useDrama } from '@una-pcl/web3d';
 
 const { frames, selectFrame } = useDrama();
 const play = () => {

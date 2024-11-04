@@ -1,5 +1,5 @@
 import { h } from 'vue';
-import { addNodeToContainer, useDrama } from '@cutie/web3d';
+import { addNodeToContainer, useDrama } from '@una-pcl/web3d';
 import MetricPanel from './components/MetricPanel.vue';
 
 export const useMiddleware = () => {

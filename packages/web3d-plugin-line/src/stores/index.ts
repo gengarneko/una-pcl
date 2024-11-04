@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia';
 import { computed } from 'vue';
-import { useDrama, useFocus, useSetFocusOnClick, useSync } from '@cutie/web3d';
+import { useDrama, useFocus, useSetFocusOnClick, useSync } from '@una-pcl/web3d';
 import { ALine } from '../types';
 import { TLine } from '../three/TLine';
 import * as THREE from 'three';

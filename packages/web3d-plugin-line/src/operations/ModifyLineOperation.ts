@@ -1,4 +1,4 @@
-import { AnswerContent, Operation } from '@cutie/web3d';
+import { AnswerContent, Operation } from '@una-pcl/web3d';
 import { ALine } from '../types';
 
 export class ModifyLineOperation implements Operation {

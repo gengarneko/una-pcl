@@ -1,4 +1,4 @@
-import { useAdvanceDrama } from '@cutie/web3d';
+import { useAdvanceDrama } from '@una-pcl/web3d';
 import { defineStore } from 'pinia';
 import { shallowRef } from 'vue';
 import * as THREE from 'three';

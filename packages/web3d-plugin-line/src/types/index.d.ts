@@ -1,4 +1,4 @@
-import { AElement } from '@cutie/web3d';
+import { AElement } from '@una-pcl/web3d';
 
 export interface ALine extends AElement {
     readonly points: {

@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 import { Octree } from '../libs/Octree';
-import { LAYER_POINTS } from '@cutie/web3d/src/constants';
+import { LAYER_POINTS } from '@una-pcl/web3d/src/constants';
 
 type LodIndexConfig = {
     distance: number;

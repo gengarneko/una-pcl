@@ -1,7 +1,7 @@
 import * as THREE from 'three';
 import { CSS2DObject } from 'three/examples/jsm/renderers/CSS2DRenderer.js';
 import { ABox } from '../types';
-import { TFocusableEventMap, TFrame, rbox2Matrix } from '@cutie/web3d';
+import { TFocusableEventMap, TFrame, rbox2Matrix } from '@una-pcl/web3d';
 
 const _rectMaterial = /*@__PURE__*/ new THREE.MeshBasicMaterial({ name: 'box::surface', color: 0xff0000, opacity: 0.2, transparent: true });
 const _rectFocusMaterial = /*@__PURE__*/ new THREE.MeshBasicMaterial({ name: 'box[focus::surface]', color: 0xff0000, opacity: 0.4, transparent: true });

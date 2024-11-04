@@ -1,6 +1,6 @@
 import { Ref, shallowRef, watch } from 'vue';
 import * as THREE from 'three';
-import { AElement, TFrame, useDrama } from '@cutie/web3d';
+import { AElement, TFrame, useDrama } from '@una-pcl/web3d';
 
 type TracedAElement = AElement & {
     readonly traceId: string;

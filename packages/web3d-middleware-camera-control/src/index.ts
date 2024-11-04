@@ -1,4 +1,4 @@
-import { addNodeToContainer, useAdvanceDrama } from '@cutie/web3d';
+import { addNodeToContainer, useAdvanceDrama } from '@una-pcl/web3d';
 import ToolBox from './components/ToolBox.vue';
 import { h, watch } from 'vue';
 import { ViewHelper } from 'three/examples/jsm/helpers/ViewHelper.js';

@@ -1,5 +1,5 @@
 import * as THREE from 'three';
-import { LAYER_POINTS, RBox, useAdvanceDrama } from '@cutie/web3d';
+import { LAYER_POINTS, RBox, useAdvanceDrama } from '@una-pcl/web3d';
 import { MaybeRefOrGetter, computed, ref, toValue, watch, watchEffect } from 'vue';
 import { useElementSize, useEventListener, useRafFn, useResizeObserver } from '@vueuse/core';
 

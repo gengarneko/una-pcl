@@ -1,4 +1,4 @@
-import { Frame, useDrama } from '@cutie/web3d';
+import { Frame, useDrama } from '@una-pcl/web3d';
 
 import { PCDLoader } from './libs/PCDLoader.js';
 import { usePCDCachedLoader } from './loader';

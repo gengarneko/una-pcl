@@ -1,6 +1,6 @@
 import { defineStore, storeToRefs } from 'pinia';
 import { ref, watch, watchEffect } from 'vue';
-import { useDrama } from '@cutie/web3d';
+import { useDrama } from '@una-pcl/web3d';
 import * as THREE from 'three';
 import { useParsingAnswerStore } from './answer';
 import { ParsingInstance } from '../types';

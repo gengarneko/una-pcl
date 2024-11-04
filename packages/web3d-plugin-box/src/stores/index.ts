@@ -2,7 +2,7 @@ import { defineStore } from 'pinia';
 import { computed, watch } from 'vue';
 import { TBox } from '../three/TBox';
 import { ABox } from '../types';
-import { useDrama, useFocus, useSync } from '@cutie/web3d';
+import { useDrama, useFocus, useSync } from '@una-pcl/web3d';
 import { ModifyBoxOperation } from '../operations/ModifyBoxOperation';
 import { useMotions } from '../hooks/motion';
 

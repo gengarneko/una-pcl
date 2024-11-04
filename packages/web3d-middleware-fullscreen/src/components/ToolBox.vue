@@ -12,7 +12,7 @@
 </template>
 <script setup lang="ts">
 import { useFullscreen } from '@vueuse/core';
-import { useDrama } from '@cutie/web3d';
+import { useDrama } from '@una-pcl/web3d';
 import { Ref } from 'vue';
 
 const { container } = useDrama();

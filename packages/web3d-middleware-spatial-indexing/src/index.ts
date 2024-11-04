@@ -1,4 +1,4 @@
-import { useAdvanceDrama, usePerformanceStore } from '@cutie/web3d';
+import { useAdvanceDrama, usePerformanceStore } from '@una-pcl/web3d';
 import localforage from 'localforage';
 import { Octree } from './libs/Octree';
 import { QuadTree } from './libs/QuadTree';

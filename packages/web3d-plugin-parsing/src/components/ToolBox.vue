@@ -7,7 +7,7 @@
     </div>
 </template>
 <script lang="ts" setup>
-import { useDrama } from '@cutie/web3d';
+import { useDrama } from '@una-pcl/web3d';
 import { FieldXYZ, PCDFields, dumpBinary } from '../features/dump';
 import { useParsingStore } from '../stores';
 import { storeToRefs } from 'pinia';

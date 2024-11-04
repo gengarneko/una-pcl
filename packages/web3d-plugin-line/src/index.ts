@@ -1,4 +1,4 @@
-import { addNodeToContainer, useDrama } from '@cutie/web3d';
+import { addNodeToContainer, useDrama } from '@una-pcl/web3d';
 import { storeToRefs } from 'pinia';
 import { h } from 'vue';
 import { useLineStore } from './stores';

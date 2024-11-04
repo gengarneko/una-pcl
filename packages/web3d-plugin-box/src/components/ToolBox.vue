@@ -6,7 +6,7 @@
     </div>
 </template>
 <script lang="ts" setup>
-import { useDrama } from '@cutie/web3d';
+import { useDrama } from '@una-pcl/web3d';
 import { useCopyNextAction } from '../actions/copynext';
 
 const { activeTool, mouseState } = useDrama();

@@ -1,5 +1,5 @@
 {
-  "name": "@cutie/web3d-middleware-fullscreen",
+  "name": "@una-pcl/web3d-middleware-fullscreen",
   "private": true,
   "version": "0.0.1",
   "type": "module",
@@ -11,6 +11,6 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
   },
   "dependencies": {
-    "@cutie/web3d": "0.0.1"
+    "@una-pcl/web3d": "0.0.1"
   }
 }

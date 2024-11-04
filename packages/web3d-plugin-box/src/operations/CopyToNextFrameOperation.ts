@@ -1,4 +1,4 @@
-import { AnswerContent, Operation } from '@cutie/web3d';
+import { AnswerContent, Operation } from '@una-pcl/web3d';
 import { ABox } from '../types';
 import * as THREE from 'three';
 

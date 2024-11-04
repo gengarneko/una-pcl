@@ -10,7 +10,7 @@
     </div>
 </template>
 <script setup lang="ts">
-import { useDrama } from '@cutie/web3d';
+import { useDrama } from '@una-pcl/web3d';
 
 const { shaderMode } = useDrama();
 

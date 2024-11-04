@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest';
 import * as THREE from 'three';
 import { FieldXYZ, dumpAscii, dumpBinary } from './dump';
 import { PCDLoader } from 'three/addons/loaders/PCDLoader.js';
-import { TFrame } from '@cutie/web3d';
+import { TFrame } from '@una-pcl/web3d';
 
 describe('dumpAscii', () => {
     it('should dump ASCII PCD data', () => {

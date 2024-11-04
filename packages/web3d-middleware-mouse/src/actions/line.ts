@@ -1,7 +1,7 @@
 import { MaybeRefOrGetter, Ref, toValue } from 'vue';
 import { usePos } from './utils';
 import { EventHook, useEventListener, useMagicKeys, whenever } from '@vueuse/core';
-import { AdvanceMouseEvent } from '@cutie/web3d';
+import { AdvanceMouseEvent } from '@una-pcl/web3d';
 
 export const drawLine = (
     dom: MaybeRefOrGetter<HTMLElement>,

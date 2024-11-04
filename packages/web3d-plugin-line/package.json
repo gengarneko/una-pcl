@@ -1,5 +1,5 @@
 {
-  "name": "@cutie/web3d-plugin-line",
+  "name": "@una-pcl/web3d-plugin-line",
   "private": true,
   "version": "0.0.1",
   "type": "module",
@@ -8,7 +8,7 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
   },
   "dependencies": {
-    "@cutie/web3d": "0.0.1",
+    "@una-pcl/web3d": "0.0.1",
     "@vueuse/core": "10.9.0",
     "lodash": "^4.17.21",
     "vue": "^3.4.29"

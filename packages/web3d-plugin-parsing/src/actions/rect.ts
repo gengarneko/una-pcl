@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 import { ParsingOperation } from '../operations/ParsingOperation';
-import { Operation, TFrame, useDrama } from '@cutie/web3d';
+import { Operation, TFrame, useDrama } from '@una-pcl/web3d';
 import { storeToRefs } from 'pinia';
 import { useParsingStore } from '../stores';
 

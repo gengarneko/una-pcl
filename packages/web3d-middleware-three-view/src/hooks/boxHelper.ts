@@ -1,4 +1,4 @@
-import { RBox } from '@cutie/web3d';
+import { RBox } from '@una-pcl/web3d';
 import * as THREE from 'three';
 import { axis2d, views } from '../constants';
 

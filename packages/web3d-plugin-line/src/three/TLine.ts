@@ -1,5 +1,5 @@
 import * as THREE from 'three';
-import { TFocusableEventMap, TFrame } from '@cutie/web3d';
+import { TFocusableEventMap, TFrame } from '@una-pcl/web3d';
 import { ALine } from '../types';
 
 const _lineMaterial = new THREE.LineBasicMaterial({ name: 'line', color: 0xdddd00 });

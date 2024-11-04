@@ -1,4 +1,4 @@
-import { useDrama } from '@cutie/web3d';
+import { useDrama } from '@una-pcl/web3d';
 import localforage from 'localforage';
 import { defineStore } from 'pinia';
 import { ref, toRaw } from 'vue';

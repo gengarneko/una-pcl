@@ -1,4 +1,4 @@
-import { TFrame } from '@cutie/web3d';
+import { TFrame } from '@una-pcl/web3d';
 import { AnswerContent, ParsingInstance } from '../types';
 
 export class ParsingOperation {

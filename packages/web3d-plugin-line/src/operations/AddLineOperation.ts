@@ -1,4 +1,4 @@
-import { AnswerContent, Operation, TFrame } from '@cutie/web3d';
+import { AnswerContent, Operation, TFrame } from '@una-pcl/web3d';
 import { ALine } from '../types';
 
 export class AddLineOperation implements Operation {

@@ -56,7 +56,7 @@
 <script lang="ts" setup>
 import { useParsingStore } from '../stores';
 import { storeToRefs } from 'pinia';
-import { useDrama } from '@cutie/web3d';
+import { useDrama } from '@una-pcl/web3d';
 import { mdiEye, mdiEyeOff, mdiLock, mdiLockOpen } from '@mdi/js';
 import { useActions } from '../actions';
 

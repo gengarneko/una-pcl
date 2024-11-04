@@ -1,6 +1,6 @@
 import { Octree } from './libs/Octree';
 import { KDTree } from './libs/KDTree';
-import { usePerformanceStore } from '@cutie/web3d';
+import { usePerformanceStore } from '@una-pcl/web3d';
 import { QuadTree } from './libs/QuadTree';
 
 export const injectPerformance = () => {

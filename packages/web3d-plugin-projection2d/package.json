@@ -1,5 +1,5 @@
 {
-  "name": "@cutie/web3d-plugin-projection2d",
+  "name": "@una-pcl/web3d-plugin-projection2d",
   "private": true,
   "version": "0.0.1",
   "type": "module",
@@ -10,7 +10,7 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
   },
   "dependencies": {
-    "@cutie/web3d": "0.0.1",
+    "@una-pcl/web3d": "0.0.1",
     "konva": "^9.3.6",
     "overlayscrollbars": "^2.7.0",
     "overlayscrollbars-vue": "^0.5.9",

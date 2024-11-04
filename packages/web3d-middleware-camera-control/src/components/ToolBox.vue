@@ -18,7 +18,7 @@
     </div>
 </template>
 <script lang="ts" setup>
-import { useAdvanceDrama } from '@cutie/web3d';
+import { useAdvanceDrama } from '@una-pcl/web3d';
 
 const { mouseState, controlMode } = useAdvanceDrama();
 

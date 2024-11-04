@@ -1,4 +1,4 @@
-import { ITFrame } from '@cutie/web3d';
+import { ITFrame } from '@una-pcl/web3d';
 import * as THREE from 'three';
 
 const zeroPlane = new THREE.Plane(new THREE.Vector3(0, 0, 1), 0);

@@ -1,5 +1,5 @@
 import * as THREE from 'three';
-import { useAdvanceDrama } from '@cutie/web3d';
+import { useAdvanceDrama } from '@una-pcl/web3d';
 import { useMemoize, useRafFn } from '@vueuse/core';
 import { watch, computed, ref } from 'vue';
 

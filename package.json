@@ -1,11 +1,11 @@
 {
-  "name": "@cutie/tool",
+  "name": "@una-pcl/tool",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "yarn workspace @cutie/web3d-entry dev",
-    "build": "yarn workspace @cutie/web3d-entry build",
+    "dev": "yarn workspace @una-pcl/web3d-entry dev",
+    "build": "yarn workspace @una-pcl/web3d-entry build",
     "test": "yarn workspaces foreach -A run test --run",
     "lint": "yarn workspaces foreach -Apt run lint --fix"
   },

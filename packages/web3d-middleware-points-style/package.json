@@ -1,5 +1,5 @@
 {
-  "name": "@cutie/web3d-middleware-points-style",
+  "name": "@una-pcl/web3d-middleware-points-style",
   "private": true,
   "version": "0.0.1",
   "type": "module",
@@ -10,7 +10,7 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
   },
   "dependencies": {
-    "@cutie/web3d": "0.0.1",
+    "@una-pcl/web3d": "0.0.1",
     "@vueuse/core": "^10.11.0",
     "three": "^0.165.0",
     "vue": "^3.4.29"

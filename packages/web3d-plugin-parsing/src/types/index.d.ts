@@ -1,5 +1,5 @@
-import * as BaseType from '@cutie/web3d';
-export type * from '@cutie/web3d';
+import * as BaseType from '@una-pcl/web3d';
+export type * from '@una-pcl/web3d';
 
 export type ParsingInstance = ParsingAnswerInstance & {
     visible: boolean

@@ -1,4 +1,4 @@
-import { useDrama } from '@cutie/web3d';
+import { useDrama } from '@una-pcl/web3d';
 import { storeToRefs } from 'pinia';
 import { useBoxStore } from '../stores';
 import { ABox } from '../types';

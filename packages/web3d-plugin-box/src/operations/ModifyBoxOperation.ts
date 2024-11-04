@@ -1,4 +1,4 @@
-import { AnswerContent, Operation, RBox } from '@cutie/web3d';
+import { AnswerContent, Operation, RBox } from '@una-pcl/web3d';
 
 export class ModifyBoxOperation implements Operation {
     readonly uuid: string;

@@ -1,4 +1,4 @@
-import { useDrama } from '@cutie/web3d';
+import { useDrama } from '@una-pcl/web3d';
 import { defineStore } from 'pinia';
 import { ref, watch } from 'vue';
 import { PointsAllInOneMaterial } from '../three/material';
