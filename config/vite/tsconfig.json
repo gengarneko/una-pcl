@@ -1,0 +1,3 @@
+{
+  "extends": ["@una-pcl/tsconfig/base.json"]
+}

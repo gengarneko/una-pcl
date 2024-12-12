@@ -3,7 +3,6 @@ yarn-debug.log*
 yarn-error.log*
 .yarn
 
-
 node_modules
 dist
 .VSCodeCounter/
@@ -17,4 +16,6 @@ dist
 # PCD File
 *.pcd
 
-public/*
+pub/*
+
+.turbo

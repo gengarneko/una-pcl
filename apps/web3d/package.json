@@ -1,0 +1,38 @@
+{
+  "name": "una-pcl",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "test": "vitest",
+    "lint": "oxlint --fix"
+  },
+  "dependencies": {
+    "@una-pcl/web3d": "0.0.1",
+    "@una-pcl/web3d-middleware-answer-cache": "0.0.1",
+    "@una-pcl/web3d-middleware-answer-history": "0.0.1",
+    "@una-pcl/web3d-middleware-camera-control": "0.0.1",
+    "@una-pcl/web3d-middleware-frame-pagination": "0.0.1",
+    "@una-pcl/web3d-middleware-mouse": "0.0.1",
+    "@una-pcl/web3d-middleware-pcd-loader": "0.0.1",
+    "@una-pcl/web3d-middleware-points-style": "0.0.1",
+    "@una-pcl/web3d-middleware-render-info": "0.0.1",
+    "@una-pcl/web3d-middleware-render-sampling": "0.0.1",
+    "@una-pcl/web3d-middleware-spatial-indexing": "0.0.1",
+    "@una-pcl/web3d-middleware-three-view": "0.0.1",
+    "@una-pcl/web3d-plugin-box": "0.0.1",
+    "@una-pcl/web3d-plugin-line": "0.0.1",
+    "@una-pcl/web3d-plugin-parsing": "0.0.1",
+    "@mdi/js": "^7.4.47",
+    "pinia": "^2.1.7",
+    "vue": "^3.4.29"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.16"
+  }
+}

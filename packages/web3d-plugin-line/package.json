@@ -1,19 +1,22 @@
 {
-  "name": "@cutie/web3d-plugin-line",
-  "private": true,
+  "name": "@una-pcl/web3d-plugin-line",
   "version": "0.0.1",
+  "private": true,
+  "license": "ISC",
   "type": "module",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
   "scripts": {
-    "test": "vitest",
-    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
-  },
-  "dependencies": {
-    "@cutie/web3d": "0.0.1",
-    "@vueuse/core": "10.9.0",
-    "lodash": "^4.17.21",
-    "vue": "^3.4.25"
+    "test": "vitest"
   },
   "devDependencies": {
-    "@types/lodash": "^4.17.0"
+    "@types/lodash": "^4.17.0",
+    "@una-pcl/tsconfig": "workspace:*"
+  },
+  "dependencies": {
+    "@una-pcl/web3d": "workspace:*",
+    "@vueuse/core": "10.9.0",
+    "lodash": "^4.17.21",
+    "vue": "^3.4.29"
   }
 }

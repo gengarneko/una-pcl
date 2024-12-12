@@ -1,0 +1,16 @@
+{
+  "name": "@una-pcl/tsconfig",
+  "version": "0.4.3",
+  "private": true,
+  "description": "A package to share tsconfig presets around the workspace",
+  "license": "MIT",
+  "author": "gengarneko",
+  "type": "module",
+  "files": [
+    "./base.json",
+    "./next.json",
+    "./react.json",
+    "./build.json",
+    "./dom.json"
+  ]
+}

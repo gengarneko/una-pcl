@@ -1,39 +1,56 @@
-import { defineStore } from 'pinia';
-import { computed, watch } from 'vue';
-import { TBox } from '../three/TBox';
-import { ABox } from '../types';
-import { useDrama, useFocus, useSync } from '@cutie/web3d';
-import { ModifyBoxOperation } from '../operations/ModifyBoxOperation';
-import { useMotions } from '../hooks/motion';
+import { defineStore } from "pinia";
+import { computed, watch } from "vue";
+import { TBox } from "../three/TBox";
+import { ABox } from "../types";
+import { useDrama, useFocus, useSync } from "@una-pcl/web3d";
+import { ModifyBoxOperation } from "../operations/ModifyBoxOperation";
+import { useMotions } from "../hooks/motion";
 
-export const useBoxStore = defineStore('plugin::box', () => {
-    const { frames, answer, transform, attachTransform, applyOperation } = useDrama();
+export const useBoxStore = defineStore("plugin::box", () => {
+  const { frames, answer, transform, attachTransform, applyOperation } =
+    useDrama();
 
-    const { elementsWithMotion: elements } = useMotions(computed(() => answer.value.elements.filter(e => e.schema === 'box') as ABox[]));
-    const boxes: Map<string, TBox> = new Map([]);
-    const { draft } = useSync(frames, elements, boxes,
-        el => new TBox(el), (obj, el) => obj.apply(el), obj => obj.dispose());
-    const { focused } = useFocus(elements, boxes);
-    watch(focused, value => {
-        if (value === undefined) {
-            draft.value = undefined;
-            attachTransform();
-        } else {
-            transform.setSpace('local');
-            attachTransform(boxes.get(value.uuid), (box) => {
-                draft.value = {
-                    ...value,
-                    ...box
-                };
-            }, (box) => {
-                const op = new ModifyBoxOperation(value.uuid, { ...value, ...box });
-                applyOperation(op);
-            });
-        }
-    });
+  const { elementsWithMotion: elements } = useMotions(
+    computed(
+      () => answer.value.elements.filter((e) => e.schema === "box") as ABox[],
+    ),
+  );
+  const boxes: Map<string, TBox> = new Map([]);
+  const { draft } = useSync(
+    frames,
+    elements,
+    boxes,
+    (el) => new TBox(el),
+    (obj, el) => obj.apply(el),
+    (obj) => obj.dispose(),
+  );
+  const { focused } = useFocus(elements, boxes);
+  watch(focused, (value) => {
+    if (value === undefined) {
+      draft.value = undefined;
+      attachTransform();
+    } else {
+      transform.setSpace("local");
+      attachTransform(
+        boxes.get(value.uuid),
+        (box) => {
+          draft.value = {
+            ...value,
+            ...box,
+          };
+        },
+        (box) => {
+          const op = new ModifyBoxOperation(value.uuid, { ...value, ...box });
+          applyOperation(op);
+        },
+      );
+    }
+  });
 
-    return {
-        focused, draft,
-        elements, boxes,
-    } as const;
+  return {
+    focused,
+    draft,
+    elements,
+    boxes,
+  } as const;
 });

@@ -1,21 +1,23 @@
-import { AnswerContent, Operation } from '@cutie/web3d';
-import { ALine } from '../types';
+import { AnswerContent, Operation } from "@una-pcl/web3d";
+import { ALine } from "../types";
 
 export class RemoveLineOperation implements Operation {
-    readonly line: ALine;
+  readonly line: ALine;
 
-    constructor(line: ALine) {
-        this.line = line;
-    }
+  constructor(line: ALine) {
+    this.line = line;
+  }
 
-    get description(): string {
-        return '删除线';
-    }
+  get description(): string {
+    return "删除线";
+  }
 
-    apply(answer: AnswerContent): AnswerContent {
-        return {
-            ...answer,
-            elements: answer.elements.filter(element => element.uuid !== this.line.uuid)
-        };
-    }
+  apply(answer: AnswerContent): AnswerContent {
+    return {
+      ...answer,
+      elements: answer.elements.filter(
+        (element) => element.uuid !== this.line.uuid,
+      ),
+    };
+  }
 }

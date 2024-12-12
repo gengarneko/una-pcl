@@ -1,17 +1,20 @@
 {
-  "name": "@cutie/web3d-middleware-render-sampling",
-  "private": true,
+  "name": "@una-pcl/web3d-middleware-render-sampling",
   "version": "0.0.1",
+  "private": true,
+  "license": "ISC",
   "type": "module",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
   "scripts": {
-    "dev": "vite",
-    "build": "vue-tsc --noEmit && vite build",
-    "test": "vitest",
-    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
+    "test": "vitest"
+  },
+  "devDependencies": {
+    "@una-pcl/tsconfig": "workspace:*"
   },
   "dependencies": {
-    "@cutie/web3d": "0.0.1",
-    "@vueuse/core": "^10.9.0",
-    "vue": "^3.4.25"
+    "@una-pcl/web3d": "workspace:*",
+    "@vueuse/core": "^10.11.0",
+    "vue": "^3.4.29"
   }
 }

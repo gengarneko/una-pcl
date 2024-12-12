@@ -1,86 +1,109 @@
-import * as THREE from 'three';
-import { TFocusableEventMap, TFrame } from '@cutie/web3d';
-import { ALine } from '../types';
+import * as THREE from "three";
+import { TFocusableEventMap, TFrame } from "@una-pcl/web3d";
+import { ALine } from "../types";
 
-const _lineMaterial = new THREE.LineBasicMaterial({ name: 'line', color: 0xdddd00 });
-const _lineFocusMaterial = new THREE.LineBasicMaterial({ name: 'line[focus]', color: 0xff3300 });
+const _lineMaterial = new THREE.LineBasicMaterial({
+  name: "line",
+  color: 0xdddd00,
+});
+const _lineFocusMaterial = new THREE.LineBasicMaterial({
+  name: "line[focus]",
+  color: 0xff3300,
+});
 const _sphereGeometry = new THREE.SphereGeometry(0.1, 16, 16);
-const _sphereMaterial = new THREE.MeshBasicMaterial({ name: 'line::point', color: 0xffffff });
+const _sphereMaterial = new THREE.MeshBasicMaterial({
+  name: "line::point",
+  color: 0xffffff,
+});
 
 export class TLine extends THREE.Object3D<TFocusableEventMap> {
-    element: ALine;
+  element: ALine;
 
-    private points: THREE.InstancedMesh;
-    private lines: THREE.Line;
+  private points: THREE.InstancedMesh;
+  private lines: THREE.Line;
 
-    constructor(line: ALine) {
-        super();
-        this.element = line;
+  constructor(line: ALine) {
+    super();
+    this.element = line;
 
-        const p = this.element.points.map(p => new THREE.Vector3(p.x, p.y, p.z));
-        const geometry = new THREE.BufferGeometry().setFromPoints(p);
-        this.lines = new THREE.Line(geometry, _lineMaterial);
-        this.add(this.lines);
+    const p = this.element.points.map((p) => new THREE.Vector3(p.x, p.y, p.z));
+    const geometry = new THREE.BufferGeometry().setFromPoints(p);
+    this.lines = new THREE.Line(geometry, _lineMaterial);
+    this.add(this.lines);
 
-        this.points = new THREE.InstancedMesh(_sphereGeometry, _sphereMaterial, p.length);
-        p.forEach((p, i) => this.points.setMatrixAt(i, new THREE.Matrix4().setPosition(p)));
-        this.add(this.points);
+    this.points = new THREE.InstancedMesh(
+      _sphereGeometry,
+      _sphereMaterial,
+      p.length,
+    );
+    p.forEach((p, i) =>
+      this.points.setMatrixAt(i, new THREE.Matrix4().setPosition(p)),
+    );
+    this.add(this.points);
 
-        this.matrixAutoUpdate = false;
-        this.matrixWorldNeedsUpdate = false;
-        this._bindEvent();
+    this.matrixAutoUpdate = false;
+    this.matrixWorldNeedsUpdate = false;
+    this._bindEvent();
+  }
+
+  private _bindEvent() {
+    this.addEventListener("focus", this._onFocus.bind(this));
+    this.addEventListener("blur", this._onBlur.bind(this));
+  }
+
+  private _onFocus() {
+    this.lines.material = _lineFocusMaterial;
+    this.parentFrame.update();
+  }
+
+  private _onBlur() {
+    this.lines.material = _lineMaterial;
+    this.parentFrame.update();
+  }
+
+  get parentFrame() {
+    return this.parent as TFrame;
+  }
+
+  get isTCube() {
+    return true;
+  }
+
+  raycast(raycaster: THREE.Raycaster, intersects: THREE.Intersection[]) {
+    const innerIntersect = [] as THREE.Intersection[];
+    this.lines.raycast(raycaster, innerIntersect);
+    if (innerIntersect.length > 0) {
+      innerIntersect[0].object = this;
+      intersects.push(innerIntersect[0]);
     }
+  }
 
-    private _bindEvent() {
-        this.addEventListener('focus', this._onFocus.bind(this));
-        this.addEventListener('blur', this._onBlur.bind(this));
-    };
+  apply(line: ALine) {
+    if (line !== this.element) {
+      this.element = line;
 
-    private _onFocus() {
-        this.lines.material = _lineFocusMaterial;
-        this.parentFrame.update();
+      const p = this.element.points.map(
+        (p) => new THREE.Vector3(p.x, p.y, p.z),
+      );
+      this.lines.geometry.dispose();
+      this.lines.geometry = new THREE.BufferGeometry().setFromPoints(p);
+
+      this.points.dispose();
+      this.remove(this.points);
+      this.points = new THREE.InstancedMesh(
+        _sphereGeometry,
+        _sphereMaterial,
+        p.length,
+      );
+      p.forEach((p, i) =>
+        this.points.setMatrixAt(i, new THREE.Matrix4().setPosition(p)),
+      );
+      this.add(this.points);
     }
+  }
 
-    private _onBlur() {
-        this.lines.material = _lineMaterial;
-        this.parentFrame.update();
-    }
-
-    get parentFrame() {
-        return this.parent as TFrame;
-    }
-
-    get isTCube() {
-        return true;
-    }
-
-    raycast(raycaster: THREE.Raycaster, intersects: THREE.Intersection[]) {
-        const innerIntersect = [] as THREE.Intersection[];
-        this.lines.raycast(raycaster, innerIntersect);
-        if (innerIntersect.length > 0) {
-            innerIntersect[0].object = this;
-            intersects.push(innerIntersect[0]);
-        }
-    }
-
-    apply(line: ALine) {
-        if (line !== this.element) {
-            this.element = line;
-
-            const p = this.element.points.map(p => new THREE.Vector3(p.x, p.y, p.z));
-            this.lines.geometry.dispose();
-            this.lines.geometry = new THREE.BufferGeometry().setFromPoints(p);
-
-            this.points.dispose();
-            this.remove(this.points);
-            this.points = new THREE.InstancedMesh(_sphereGeometry, _sphereMaterial, p.length);
-            p.forEach((p, i) => this.points.setMatrixAt(i, new THREE.Matrix4().setPosition(p)));
-            this.add(this.points);
-        }
-    }
-
-    dispose() {
-        this.lines.geometry.dispose();
-        this.points.dispose();
-    }
+  dispose() {
+    this.lines.geometry.dispose();
+    this.points.dispose();
+  }
 }

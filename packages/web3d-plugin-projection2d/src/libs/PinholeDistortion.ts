@@ -1,23 +1,23 @@
 const PinholeDistortionShader = {
-    uniforms: {
-        tDiffuse: { value: null }, // The texture of the image to be distorted (automatically assigned by ShaderPass)
-        uCoefficients: { value: [0, 0, 0, 0, 0, 0, 0, 0] }, // k1, k2, p1, p2, k3, k4, k5, k6
-        uPrincipalPoint: { value: null },
-        uFocalLength: { value: null },
-        uImageWidth: { value: 0 },
-        uImageHeight: { value: 0 },
-        uRelAspect: { value: 1.0 },
-        uZoomForDistortionFactor: { value: 1.0 },
-    },
+  uniforms: {
+    tDiffuse: { value: null }, // The texture of the image to be distorted (automatically assigned by ShaderPass)
+    uCoefficients: { value: [0, 0, 0, 0, 0, 0, 0, 0] }, // k1, k2, p1, p2, k3, k4, k5, k6
+    uPrincipalPoint: { value: null },
+    uFocalLength: { value: null },
+    uImageWidth: { value: 0 },
+    uImageHeight: { value: 0 },
+    uRelAspect: { value: 1.0 },
+    uZoomForDistortionFactor: { value: 1.0 },
+  },
 
-    vertexShader: /* glsl */ `
+  vertexShader: /* glsl */ `
       varying vec2 vUv;
       void main() {
         vUv = uv;
         gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );
       }`,
 
-    fragmentShader: /* glsl */ `
+  fragmentShader: /* glsl */ `
       uniform sampler2D tDiffuse;
       uniform float uCoefficients[8];
       uniform vec2 uPrincipalPoint;

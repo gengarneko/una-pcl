@@ -1,0 +1,21 @@
+{
+  "name": "@una-pcl/web3d-middleware-potree-loader",
+  "version": "0.0.1",
+  "private": true,
+  "license": "ISC",
+  "type": "module",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "scripts": {
+    "test": "vitest"
+  },
+  "devDependencies": {
+    "@una-pcl/tsconfig": "workspace:*"
+  },
+  "dependencies": {
+    "@una-pcl/web3d": "workspace:*",
+    "@pnext/three-loader": "^0.3.5",
+    "@vueuse/core": "^10.9.0",
+    "vue": "^3.4.25"
+  }
+}

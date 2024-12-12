@@ -1,3 +1,4 @@
 export {
-    IntersectAbleObject, PointsIntersect
-} from '@cutie/web3d/three/TFrame';
+  IntersectAbleObject,
+  PointsIntersect,
+} from "@una-pcl/web3d/three/TFrame";

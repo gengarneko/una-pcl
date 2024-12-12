@@ -1,20 +1,23 @@
-import { Frame, useDrama } from '@cutie/web3d';
+import { Frame, useDrama } from "@una-pcl/web3d";
 
-import { PCDLoader } from 'three/addons/loaders/PCDLoader.js';
-import { usePCDCachedLoader } from './loader';
+// @ts-ignore
+import { PCDLoader } from "./libs/PCDLoader.js";
+import { usePCDCachedLoader } from "./loader";
 
 export const useMiddleware = () => {
-    const { frames } = useDrama();
+  const { frames } = useDrama();
 
-    const loader = usePCDCachedLoader(new PCDLoader());
+  const loader = usePCDCachedLoader(new PCDLoader());
 
-    frames.forEach(frame => {
-        if (frame.index === 0) {
-            return;
-        }
-        const url = (frame.userData['data'] as Frame).url;
-        loader.load(url).then((obj) => {
-            frame.points = obj;
-        });
-    });
+  frames.forEach((frame) => {
+    if (frame.index === 0) {
+      return;
+    }
+    const { url, format = "pcd" } = frame.userData["data"] as Frame;
+    if (format === "pcd") {
+      loader.load(url).then((obj) => {
+        frame.points = obj;
+      });
+    }
+  });
 };

@@ -1,23 +1,23 @@
-import { AnswerContent, Operation, TFrame } from '@cutie/web3d';
-import { ALine } from '../types';
+import { AnswerContent, Operation, TFrame } from "@una-pcl/web3d";
+import { ALine } from "../types";
 
 export class AddLineOperation implements Operation {
-    readonly line: ALine;
-    readonly frame: TFrame;
+  readonly line: ALine;
+  readonly frame: TFrame;
 
-    constructor(frame: TFrame, line: ALine) {
-        this.frame = frame;
-        this.line = line;
-    }
+  constructor(frame: TFrame, line: ALine) {
+    this.frame = frame;
+    this.line = line;
+  }
 
-    get description(): string {
-        return '添加线';
-    }
+  get description(): string {
+    return "添加线";
+  }
 
-    apply(answer: AnswerContent): AnswerContent {
-        return {
-            ...answer,
-            elements: [...answer.elements, this.line]
-        };
-    }
+  apply(answer: AnswerContent): AnswerContent {
+    return {
+      ...answer,
+      elements: [...answer.elements, this.line],
+    };
+  }
 }

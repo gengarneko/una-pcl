@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Next.js",
+  "compilerOptions": {
+    "strict": true,
+    "strictNullChecks": true,
+    "allowUnusedLabels": false,
+    "allowUnreachableCode": false,
+    "exactOptionalPropertyTypes": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noUncheckedIndexedAccess": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+
+    "isolatedModules": true,
+
+    "allowJs": true,
+    "checkJs": true,
+
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+
+    "module": "esnext",
+    "target": "es2022",
+    "moduleDetection": "force",
+    "resolveJsonModule": true,
+    "noEmit": true,
+    "incremental": true,
+
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "pretty": true,
+    "preserveWatchOutput": true,
+
+    "tsBuildInfoFile": "${configDir}/tsconfig.tsbuildinfo",
+    "baseUrl": "${configDir}",
+    "paths": {
+      "@/*": ["${configDir}/src/*"]
+    },
+
+    "lib": ["dom", "dom.iterable", "esnext"],
+
+    "jsx": "preserve",
+    "plugins": [{"name": "next"}],
+    "moduleResolution": "node"
+  },
+  "include": [
+    "${configDir}/next-env.d.ts",
+    "${configDir}/.next/types/**/*.ts",
+    "${configDir}/src/**/*.ts",
+    "${configDir}/src/**/*.tsx",
+    "${configDir}/src/**/*.cts",
+    "${configDir}/src/**/*.ctsx",
+    "${configDir}/src/**/*.mts",
+    "${configDir}/src/**/*.mtsx",
+    "${configDir}/src/**/*.js",
+    "${configDir}/src/**/*.jsx",
+    "${configDir}/src/**/*.cjs",
+    "${configDir}/src/**/*.cjsx",
+    "${configDir}/src/**/*.mjs",
+    "${configDir}/src/**/*.mjsx"
+  ]
+}

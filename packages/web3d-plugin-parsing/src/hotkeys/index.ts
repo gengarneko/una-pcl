@@ -1,4 +1,1 @@
-export const useHotkeys = () => {
-
-
-};
+export const useHotkeys = () => {};

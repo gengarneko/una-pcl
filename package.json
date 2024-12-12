@@ -1,20 +1,21 @@
 {
-  "name": "@cutie/tool",
+  "name": "@una-pcl/tool",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "yarn workspace @cutie/web3d-entry dev",
-    "build": "yarn workspace @cutie/web3d-entry build",
-    "test": "yarn workspaces foreach -A run test --run",
-    "lint": "yarn workspaces foreach -Apt run lint --fix"
+    "dev": "turbo dev --filter=una-pcl",
+    "build": "turbo build",
+    "test": "turbo test",
+    "lint": "turbo lint",
+    "format": "prettier --write \"**/*.{ts,tsx}\""
   },
-  "workspaces": [
-    "packages/*"
-  ],
-  "packageManager": "yarn@4.1.1",
+  "engines": {
+    "node": ">=18"
+  },
   "dependencies": {
-    "vue": "^3.4.25"
+    "pinia": "^2.1.7",
+    "vue": "^3.4.29"
   },
   "devDependencies": {
     "@types/node": "^20.12.4",
@@ -22,12 +23,24 @@
     "@vitejs/plugin-vue": "^5.0.4",
     "@vue/eslint-config-prettier": "^9.0.0",
     "@vue/eslint-config-typescript": "^13.0.0",
+    "autoprefixer": "^10.4.20",
+    "daisyui": "^4.12.20",
     "eslint": "^8.57.0",
     "eslint-plugin-vue": "^9.24.0",
+    "oxlint": "^0.14.1",
+    "postcss": "^8.4.49",
     "prettier": "^3.2.5",
-    "typescript": "5.4.4",
+    "tailwindcss": "^3.4.16",
+    "turbo": "^2.3.3",
+    "typescript": "^5.7.2",
     "vite": "^5.2.8",
     "vitest": "^1.5.2",
     "vue-tsc": "^2.0.10"
-  }
+  },
+  "workspaces": [
+    "apps/*",
+    "config/*",
+    "packages/*"
+  ],
+  "packageManager": "bun@1.1.26"
 }

@@ -51,7 +51,7 @@
 <script setup lang="ts">
 import { useElementSize } from '@vueuse/core';
 import { computed, onMounted, ref } from 'vue';
-import { RBox } from '@cutie/web3d';
+import { RBox } from '@una-pcl/web3d';
 import { useBoxHelper } from '../hooks/boxHelper';
 import * as THREE from 'three';
 import { storeToRefs } from 'pinia';

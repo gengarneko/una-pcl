@@ -1,0 +1,26 @@
+{
+  "name": "@una-pcl/web3d",
+  "version": "0.0.1",
+  "description": "Web3D core logic",
+  "private": true,
+  "license": "ISC",
+  "type": "module",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "scripts": {
+    "build": "vue-tsc --noEmit && vite build",
+    "test": "vitest",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
+  },
+  "dependencies": {
+    "@vueuse/core": "^10.11.0",
+    "@vueuse/math": "^10.11.0",
+    "middleware-io": "^2.8.1",
+    "pinia": "^2.1.7",
+    "three": "0.165.0",
+    "vue": "^3.4.29"
+  },
+  "devDependencies": {
+    "@una-pcl/tsconfig": "workspace:*"
+  }
+}

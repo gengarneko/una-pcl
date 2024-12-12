@@ -1,0 +1,7 @@
+{
+  "extends": "@una-pcl/tsconfig/dom.json",
+  "include": ["src/**/*", "tests"],
+  "compilerOptions": {
+    "lib": ["esnext", "dom"]
+  }
+}

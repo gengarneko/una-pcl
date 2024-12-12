@@ -1,11 +1,12 @@
-import { addNodeToContainer, useDrama } from '@cutie/web3d';
-import { h } from 'vue';
+import { addNodeToContainer, useDrama } from "@una-pcl/web3d";
+import { h } from "vue";
 
-import ToolBox from './components/ToolBox.vue';
-import ContainerComponent from './components/ContainerComponent.vue';
+import ToolBox from "./components/ToolBox.vue";
+import ContainerComponent from "./components/ContainerComponent.vue";
 
 export const usePlugin = () => {
-    const { container, toolbox } = useDrama();
-    addNodeToContainer(h(ToolBox), toolbox);
-    addNodeToContainer(h(ContainerComponent), container);
+  const { container, toolbox } = useDrama();
+
+  addNodeToContainer(h(ToolBox), toolbox);
+  addNodeToContainer(h(ContainerComponent), container);
 };
