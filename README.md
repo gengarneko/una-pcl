@@ -1,6 +1,6 @@
 # una-pcl
 
-![cover](./una-pcl.jpg)
+![una-pcl.jpg](https://s2.loli.net/2024/12/12/Ro9O3T6IBPJN2uY.png)
 
 3D Point Cloud Labeling Tool
 
