@@ -14,7 +14,7 @@ dist
 .DS_Store
 
 # PCD File
-*.pcd
+# *.pcd
 
 pub/*
 
